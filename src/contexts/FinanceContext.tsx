@@ -40,7 +40,7 @@ export const FinanceProvider: React.FC<{ children: React.ReactNode }> = ({
   const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
   const [preferences, setPreferences] = useState<UserPreferences>({
-    currency: "USD",
+    currency: "NGN",
     monthlyBudget: 0,
     darkMode: false,
   });
