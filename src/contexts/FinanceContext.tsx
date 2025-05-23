@@ -65,6 +65,59 @@ export const FinanceProvider: React.FC<{ children: React.ReactNode }> = ({
 
     if (storedCategories) {
       setCategories(JSON.parse(storedCategories));
+    } else {
+      // Add default categories if none exist
+      const defaultCategories: Category[] = [
+        {
+          id: "cat-income",
+          name: "Income",
+          color: "#10B981",
+          icon: "DollarSign",
+        },
+        {
+          id: "cat-food",
+          name: "Food & Dining",
+          color: "#F97316",
+          icon: "Utensils",
+        },
+        {
+          id: "cat-transport",
+          name: "Transportation",
+          color: "#3B82F6",
+          icon: "Car",
+        },
+        {
+          id: "cat-housing",
+          name: "Housing",
+          color: "#8B5CF6",
+          icon: "Home",
+        },
+        {
+          id: "cat-utilities",
+          name: "Utilities",
+          color: "#EC4899",
+          icon: "Lightbulb",
+        },
+        {
+          id: "cat-entertainment",
+          name: "Entertainment",
+          color: "#F59E0B",
+          icon: "Film",
+        },
+        {
+          id: "cat-shopping",
+          name: "Shopping",
+          color: "#EF4444",
+          icon: "ShoppingBag",
+        },
+        {
+          id: "cat-health",
+          name: "Healthcare",
+          color: "#14B8A6",
+          icon: "Heart",
+        },
+      ];
+      setCategories(defaultCategories);
     }
 
     if (storedPreferences) {
